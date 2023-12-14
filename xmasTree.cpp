@@ -1,11 +1,14 @@
+// facebook: chetverty
+// instagram: semaphores_synchronization
+
 #include<iostream>
-#include<cstdlib>
 #include<ctime>
-#include<thread>
 #include<chrono>
+#include<cstdlib>
+#include<thread>
 using namespace std;
 
-void christmasTree(int height){
+void xmasTree(int height){
     string colors[] = {"\033[1;31m", "\033[33m", "\033[1;34m"};
     cout << endl;
 
@@ -20,8 +23,8 @@ void christmasTree(int height){
             }
 
             cout << "*";
-        } 
-        
+        }
+
         cout << endl;
     }
 
@@ -29,16 +32,12 @@ void christmasTree(int height){
     cout << string(height - 1, ' ') << "mWm" << endl;
     string color = colors[rand() % 3];
     cout << color << string(height - 7, ' ') << "Merry Christmas" << endl;
-}   
-
-// github: eriskcn
-// facebook: chetverty
-// instagram: semaphores_synchronization
+}
 
 int main(){
     srand(time(0));
     while (true){
-        christmasTree(12);
+        xmasTree(16);
         this_thread::sleep_for(chrono::milliseconds(200));
         #ifdef _WIN32
             system("cls");
@@ -46,5 +45,6 @@ int main(){
             system("clear");
         #endif
     }
+
     return 0;
 }
